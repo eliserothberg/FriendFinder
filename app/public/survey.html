@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder Survey</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- <body class ="modal-open" style>
+ -->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-12">
+      <h1>F***ing Fabulous Friend Finder Form</h1>
+      <h3>Money back if you're not matched with your best f***ing friend ever!</h3>
+      <hr>
+             
+            <h3><strong>It's All About You</strong></h3>
+
+              <div class="form-group">
+                <label for="">Name (required)</label>
+                <input type="text" id="first_name" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="">Link to Photo (required)</label>
+                <input type="text" id="photo" class="form-control" required>
+              </div>
+
+            </form>
+            <br>
+
+            <h3>Please rate the following statements from 1 to 5:</h3>
+            <br>
+
+            <form>
+
+              <h4><strong>“You live and learn. At any rate, you live.”</strong></h4>
+              <div class="btn-group" data-toggle="buttons">              
+              <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionOne" id="qOne1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionOne" id="qOne2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionOne" id="qOne3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionOne" id="qOne4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionOne" id="qOne5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“I'd far rather be happy than right any day.”</strong></h4>
+              <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+
+                <input type="radio" name="questionTwo" id="qTwo1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTwo" id="qTwo2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTwo" id="qTwo3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTwo" id="qTwo4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTwo" id="qTwo5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“My universe is my eyes and my ears. Anything else is hearsay.”</strong></h4>
+              <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionThree" id="qThree1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionThree" id="qThree2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionThree" id="qThree3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionThree" id="qThree4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionThree" id="qThree5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>"Reality is frequently inaccurate.”</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionFour" id="qFour1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFour" id="qFour2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFour" id="qFour3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFour" id="qFour4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFour" id="qFour5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“In an infinite Universe anything can happen.”</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionFive" id="qFive1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFive" id="qFive2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFive" id="qFive3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFive" id="qFive4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionFive" id="qFive5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+<!-- 
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“Only by counting could humans demonstrate their independence of computers.”</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionSix" id="qSix1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSix" id="qSix2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSix" id="qSix3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSix" id="qSix4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSix" id="qSix5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br> -->
+
+           <!--  <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“What I need... is a strong drink and a peer group.”</strong></h4>
+              <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+
+                <input type="radio" name="questionSeven" id="qSeven1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSeven" id="qSeven2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSeven" id="qSeven3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSeven" id="qSeven4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionSeven" id="qSeven5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br>
+ -->
+            <!-- <div class="btn-group" data-toggle="buttons">
+              <h4><strong>"In the beginning the Universe was created. This has made a lot of people very angry and been widely regarded as a bad move."</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionEight" id="qEight1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionEight" id="qEight2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionEight" id="qEight3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionEight" id="qEight4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionEight" id="qEight5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+
+            <br> -->
+
+            <!-- <div class="btn-group" data-toggle="buttons">
+              <h4><strong>"There’s a frood who really knows where his towel is."</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionNine" id="qNine1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionNine" id="qNine2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionNine" id="qNine3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionNine" id="qNine4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionNine" id="qNine5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div> -->
+
+           <!--  <br>
+
+            <div class="btn-group" data-toggle="buttons">
+              <h4><strong>“Don't Panic.”</strong></h4>
+               <label class="radio-inline control-label">That's ridiculous!&emsp;</label>
+                <input type="radio" name="questionTen" id="qTen1" value="1"> 1
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTen" id="qTen2" value="2"> 2
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTen" id="qTen3" value="3"> 3
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTen" id="qTen4" value="4"> 4
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="questionTen" id="qTen5" value="5">  5 &ensp; That's spot on!
+              </label>
+            </div>
+ -->
+          
+<!--             add something that won't let form process without all fields filled out
+ -->            <br>
+            <br>
+            <div class="text-center">
+              <button type="submit" class="btn btn-danger btn-md" id="submit"></span><span class="glyphicon glyphicon-heart"></span>&emsp;Find that brand new BFF!&emsp;</span><span class="glyphicon glyphicon-heart"></span></button>
+            </div>
+</form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <footer class="footer">
+        <div class="container">
+          <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/eliserothberg/FriendFinder">GitHub Repo</a></p>
+        
+      
+            <div class="text-right">
+            <font size ="-2">*All quotes from Douglas Adams' <i>Hitchhikers Guide To The Galaxy</i> five book trilogy.</font>
+            </div>
+            </div>
+        </footer>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+       
+<div class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Here's Your New BFF!</h4>
+      </div>
+      <div class="modal-body">
+        <p>put in link to pic</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+
+    <script type="text/javascript">  
+
+  var answer = [];
+  var replies = [];
+  var newFriend;
+
+  $("form").submit(function() {
+    var newFriend = {
+      name: $('#first_name').val().trim(),
+      photo: $('#photo').val().trim(),
+      scores: replies,
+    };
+
+    answer = $(this).serializeArray();
+    
+      for (i=0; i<5; i++) { 
+        // console.log("answer" + [i] + " = " + answer[i].value);
+        replies.push(answer[i].value);
+        // replies += answer[i].value;
+        // console.log("type of replies = " + typeof replies);
+
+
+        // console.log("totalDiff" + [i] + " = " + totalDiff[i]);
+       
+      }
+      console.log("replies = " + replies);
+      console.log("name: " + $('#first_name').val().trim());
+      console.log("photo link: " + $('#photo').val().trim());
+      console.log("newFriend = " + newFriend.name + " " + newFriend.photo + " " + newFriend.scores);
+
+      var currentURL = window.location.origin;
+
+      $.post(currentURL + "/api/friends", newFriend,
+      function(data){
+      });
+      return false;
+    });
+</script>
+// <!-- Call a modal with id myModal with a single line of JavaScript: 
+// $('#myModal').modal(options)
+
+// .modal('show')
+
+// Manually opens a modal. Returns to the caller before the modal has actually been shown (i.e. before the shown.bs.modal event occurs). -->
+
