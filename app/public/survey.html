@@ -290,7 +290,7 @@
   </div>
 
        
-<div class="modal fade" tabindex="-1" role="dialog">
+<div id="bffModal" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -298,7 +298,9 @@
         <h4 class="modal-title">Here's Your New BFF!</h4>
       </div>
       <div class="modal-body">
-        <p>put in link to pic</p>
+        <p>?</p>
+        <h3 id="bffName"></h3>
+        <img id="bffImage" <img src="" width="200px" height="200px" alt="Your BFF!">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -310,7 +312,11 @@
 
   var answer = [];
   var replies = [];
+  var allDiffs = [];
+  var sortDiffs = [];
   var newFriend;
+  var theFriend;
+  var thePhoto;
 
   $("form").submit(function() {
     var newFriend = {
@@ -322,29 +328,135 @@
     answer = $(this).serializeArray();
     
       for (i=0; i<5; i++) { 
-        // console.log("answer" + [i] + " = " + answer[i].value);
-        replies.push(answer[i].value);
-        // replies += answer[i].value;
-        // console.log("type of replies = " + typeof replies);
-
-
-        // console.log("totalDiff" + [i] + " = " + totalDiff[i]);
-       
+        replies.push(answer[i].value);  
       }
-      console.log("replies = " + replies);
-      console.log("name: " + $('#first_name').val().trim());
-      console.log("photo link: " + $('#photo').val().trim());
-      console.log("newFriend = " + newFriend.name + " " + newFriend.photo + " " + newFriend.scores);
+     
+      console.log("newFriend: " + newFriend.name + "  photo link: " + newFriend.photo + "  scores: " + newFriend.scores);
 
       var currentURL = window.location.origin;
+      var diff;
 
       $.post(currentURL + "/api/friends", newFriend,
       function(data){
-      });
-      return false;
-    });
+
+        if (data == true) {
+
+          // alert("need modal!");
+
+          function friendQuery(){
+
+    // Here we get the location of the root page. 
+    // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+    var currentURL = window.location.origin;
+
+    // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+    $.ajax({url: currentURL + "/api/friends", method: "GET"}) 
+      .done(function(friendsData) {
+
+         console.log("frfiendsArray = " + friendsData[1].name);
+          console.log("friendsData length = " + friendsData.length);
+    // var diff = newFriend.compArr(sam);
+    // for (var i = 0; i < 15; i++) {
+
+       Array.prototype.compArr = function(array) {
+    var diff = [];
+    if (array != null && this.length == array.length) {
+        for (var i = 0; i < array.length; i++) {
+            newDiff = Math.abs(this[i] - array[i]);
+            diff.push(newDiff);
+        }
+    }
+
+    return diff;
+}
+
+// var toCompare = newFriend.scores;
+
+
+for (i=0; i<friendsData.length -1; i++) {
+var diff = newFriend.scores.compArr(friendsData[i].scores);
+// var totalDiff = 0;
+// totalDiff += diff;
+
+var totalDiff = diff.reduce(function(a,b) {
+  return a + b;
+  // allDiffs.push(totalDiff);
+}, 0);
+
+  allDiffs.push(totalDiff);
+console.log("type of allDiffs = " + typeof allDiffs) 
+
+          console.log(newFriend.name + " and " + friendsData[i].name + " diff" + [i] + " = " + diff);
+console.log(newFriend.name + " and " + friendsData[i].name + " totalDiff" + [i] + " = " + totalDiff);
+
+
+sortDiffs.push(totalDiff);
+sortDiffs.sort(function(a, b) {
+  return a - b;
+});
+for (var j=0; j < allDiffs.length; j++){
+
+if (sortDiffs[0] === allDiffs[j]) {
+  console.log(allDiffs[j]);
+  console.log(friendsData[j].name);
+  theFriend = friendsData[j].name;
+  thePhoto = friendsData[j].photo;
+  console.log(allDiffs[j]);
+
+  // alert("Your new BFF is " + friendsData[j].name);
+}
+}
+      console.log("allDiffs = " + allDiffs);
+      console.log("sortDiffs = " + sortDiffs);
+      console.log()
+$('#myModal').on('show', function (e) {
+    if (!data) return e.preventDefault() // stops modal from being shown
+})
+
+        }
+          console.log("Your new BFF is " + theFriend + "!" + " photo: " + thePhoto);
+
+          $('#myModal').modal('show')
+          $('#bffImage').scr = thePhoto;
+          $('#bffName').html(thefriend);
+
+//           var options = {
+//     "backdrop" : "static",
+//     "keyboard" : true
+
+// }
+
+          // .modal('show')
+
+      })
+         
+        };
+      
+
+   friendQuery();
+         }
+         })
+     
+     
+});
+  
+
 </script>
-// <!-- Call a modal with id myModal with a single line of JavaScript: 
+
+
+
+<!--
+//     return diff;
+// }
+// var totalDiff = 0;
+// for (var i=0; i < diff.length; i++){
+//   totalDiff += diff[i];
+// }
+// console.log("totalDiff = " + totalDiff);
+// });
+// }
+
+// --> <!-- Call a modal with id myModal with a single line of JavaScript: 
 // $('#myModal').modal(options)
 
 // .modal('show')

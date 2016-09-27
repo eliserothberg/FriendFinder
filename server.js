@@ -13,12 +13,27 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
+//Router
 require('./app/routing/api-routes.js')(app); 
 require('./app/routing/html-routes.js')(app);
 
+//Listener
 app.listen(PORT, function () {
   console.log('App listening on PORT ' + PORT);
 });
+
+// app.post('/api/new', function (req, res) {
+//   // req.body hosts is equal to the JSON post sent from the user
+//   var newFriend = req.body;
+
+//   console.log(newFriend);
+
+//   // We then add the json the user sent to the character array
+//   characters.push(newFriend);
+
+//   // We then display the JSON to the users
+//   res.json(newFriend);
+// });
 
 // Array.prototype.compArr = function(array) {
 //     var diff = [];
@@ -52,18 +67,7 @@ app.listen(PORT, function () {
 
 // console.log("totalDiff survey = " + totalDiff);
 
-app.post('/api/new', function (req, res) {
-  // req.body hosts is equal to the JSON post sent from the user
-  var newFriend = req.body;
 
-  console.log(newFriend);
-
-  // We then add the json the user sent to the character array
-  characters.push(newFriend);
-
-  // We then display the JSON to the users
-  res.json(newFriend);
-});
 
 
 // var connection = mysql.createConnection({
