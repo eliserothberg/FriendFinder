@@ -4,7 +4,7 @@
 var friendArray = [
 {
   "name":"Bowl of Petunias",
-  "photo":"http://2.bp.blogspot.com/-t0syhe0PO2k/UZ0xA7p0keI/AAAAAAAAAKw/BQAd_k-jKXs/s1600/pansy1.jpg",
+  "photo":"https://i0.wp.com/gardenworld.com.au/files/2013/03/petunia-bowl.jpg",
   "scores":[
     "2",
     "5",
