@@ -10,8 +10,14 @@
 
 </head>
 <body>
-<!-- <body class ="modal-open" style>
- -->
+
+<style>
+body {
+  background-color: #bfc9d9;
+}
+
+
+</style>
 <div class="container">
   <div class="row">
 
@@ -259,25 +265,22 @@
             <button type="submit" class="btn btn-danger btn-md" id="submit"></span><span class="glyphicon glyphicon-heart"></span>&emsp;Find that brand new BFF!&emsp;</span><span class="glyphicon glyphicon-heart"></span></button>
           </div>
         </form>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
+        
+        <br>
+        <br>
+        <br>
+        
 
         <footer class="footer">
           <div class="container">
-            <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/eliserothberg/FriendFinder">GitHub Repo</a></p>
+            <p><a href ="/api/friends" style="color: white">API Friends List </a> | <a href="https://github.com/eliserothberg/FriendFinder"style="color: white">GitHub Repo</a></p>
+
+            <br>
+            <br>
+            <br>
+           
             <div class="text-right">
-              <font size ="-2">*All quotes from Douglas Adams' <i>Hitchhikers Guide To The Galaxy</i> five book trilogy.</font>
+              <font style="color: white" size ="-2">*All quotes from Douglas Adams' <i>Hitchhikers Guide To The Galaxy</i> five book trilogy.</font>
             </div>
           </div>
         </footer>
@@ -292,16 +295,16 @@
 <div id="bffModal" class="modal fade" role="dialog" style="display: none;">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="modal-header" style="color: #5e7599">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h3 class="modal-title"><strong>Here's Your New BFF!</strong></h3>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" style="color: #5e7599">
         <h3 id="bffName">Bowl of Petunias</h3>
-        <img id="bffImage" src="https://i0.wp.com/gardenworld.com.au/files/2013/03/petunia-bowl.jpg" width="400px" height="400px" alt="Your BFF!">
+        <img id="bffImage" src="https://i0.wp.com/gardenworld.com.au/files/2013/03/petunia-bowl.jpg" width="400px" alt="Your BFF!">
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      <div class="modal-footer" style="color: #5e7599">
+        <button type="button" class="btn btn-grey" data-dismiss="modal">Close</button>
       </div>
     </div>
   </div>
@@ -387,9 +390,8 @@ $("form").submit(function() {
           }
           console.log("allDiffs = " + allDiffs);
           console.log("sortDiffs = " + sortDiffs);
-          console.log("fucking modal");            
-
         }
+
         console.log("Your new BFF is " + theFriend + "!" + "\nphoto: " + thePhoto);
           $("#bffName").text(theFriend);             
           $("#bffImage").attr("src", thePhoto);
@@ -397,21 +399,25 @@ $("form").submit(function() {
       })
     };
     friendQuery();
-    // }
+
+    $("#bffModal").on('hide', function () {
+      $("#first_name").val("");
+      $("#photo").val("");
+        $("input[type=radio]").each(function() {
+          $(this).attr("checked", false);
+        })
+        window.location.reload();
+    
+// //this clears but doesn't let you enter again- page needs to be refreshed.
+    // $("#first_name").val("");
+    // $("#photo").val("");
+    // $("input[type=radio]").each(function() {
+    //   $(this).attr("checked", false);
+    // })
+   });
   });
 
   return false;
 }); 
 
- //    var currentURL = window.location.origin;
-
- // $.ajax({url: currentURL + "/api/friends", method: "GET"}) 
- //          .done(function(friendsData) {
- //  // $('#bffModal').on('shown.bs.modal', function (e) {
-            // $("#bffName").text(theFriend);             
-            // $("#bffImage").attr("src", thePhoto);
-            // $("#bffModal").modal('show');
- //        });
-        
-          
 </script>
