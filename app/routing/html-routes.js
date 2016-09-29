@@ -1,23 +1,15 @@
-//  include two routes:
-
-// A GET Route to /survey which should display the survey page.
-// A default USE route that leads to home.html which displays the home page.
-
 var path = require('path');
 
-// ROUTING
+// rout to survey page
 
 module.exports = function (app) {
-  // HTML GET Requests
-  // Below code handles when users "visit" a page.
-  // In each of the below cases the user is shown an HTML page of content
 
   app.get('/survey', function (req, res) {
     res.sendFile(path.join(__dirname + '/../public/survey.html'));
   });
 
 
-  // If no matching route is found default to home
+  // default to home if not matching rout found
   app.use(function (req, res) {
     res.sendFile(path.join(__dirname + '/../public/home.html'));
   });

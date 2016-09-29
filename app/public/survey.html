@@ -11,13 +11,7 @@
 </head>
 <body>
 
-<style>
-body {
-  background-color: #bfc9d9;
-  text-align: center;
-}
-
-</style>
+<!-- form to fill in, must enter something in every field and set of radio buttons-->
 <div class="container">
   <div class="row">
 
@@ -40,19 +34,17 @@ body {
           <input type="text" id="photo" class="form-control" required>
         </div>
 
-       <!--  </form> -->
         <br>
 
         <h3>Please rate the following statements from 1 to 5:</h3>
-        <br>
 
-       <!--  <form> -->
+        <br>
 
           <h4><strong>“You live and learn. At any rate, you live.”</strong></h4>
           
           <div class="btn-group" data-toggle="buttons">              
             <label class="radio-inline control-label" style="color:#c4160d"><strong>That's ridiculous!</strong>&emsp;</label>
-              <input type="radio" name="questionOne" id="qOne1" value="1"> 1
+              <input type="radio" name="questionOne" id="qOne1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionOne" id="qOne2" value="2"> 2
@@ -74,7 +66,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>“I'd far rather be happy than right any day.”</strong></h4>
             <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionTwo" id="qTwo1" value="1"> 1
+              <input type="radio" name="questionTwo" id="qTwo1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionTwo" id="qTwo2" value="2"> 2
@@ -96,7 +88,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>“My universe is my eyes and my ears. Anything else is hearsay.”</strong></h4>
             <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionThree" id="qThree1" value="1"> 1
+              <input type="radio" name="questionThree" id="qThree1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionThree" id="qThree2" value="2"> 2
@@ -118,7 +110,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>"Reality is frequently inaccurate.”</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionFour" id="qFour1" value="1"> 1
+              <input type="radio" name="questionFour" id="qFour1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionFour" id="qFour2" value="2"> 2
@@ -140,7 +132,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>“In an infinite Universe anything can happen.”</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionFive" id="qFive1" value="1"> 1
+              <input type="radio" name="questionFive" id="qFive1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionFive" id="qFive2" value="2"> 2
@@ -162,7 +154,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>“Only by counting could humans demonstrate their independence of computers.”</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionSix" id="qSix1" value="1"> 1
+              <input type="radio" name="questionSix" id="qSix1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionSix" id="qSix2" value="2"> 2
@@ -185,7 +177,7 @@ body {
             <h4><strong>“What I need... is a strong drink and a peer group.”</strong></h4>
             <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
 
-              <input type="radio" name="questionSeven" id="qSeven1" value="1"> 1
+              <input type="radio" name="questionSeven" id="qSeven1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionSeven" id="qSeven2" value="2"> 2
@@ -207,7 +199,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>"In the beginning the Universe was created.<br>This has made a lot of people very angry and been widely regarded as a bad move."</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionEight" id="qEight1" value="1"> 1
+              <input type="radio" name="questionEight" id="qEight1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionEight" id="qEight2" value="2"> 2
@@ -229,7 +221,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>"There’s a frood who really knows where his towel is."</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionNine" id="qNine1" value="1"> 1
+              <input type="radio" name="questionNine" id="qNine1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionNine" id="qNine2" value="2"> 2
@@ -251,7 +243,7 @@ body {
           <div class="btn-group" data-toggle="buttons">
             <h4><strong>“Don't Panic.”</strong></h4>
              <label class="radio-inline control-label" style="color:#c4160d">That's ridiculous!&emsp;</label>
-              <input type="radio" name="questionTen" id="qTen1" value="1"> 1
+              <input type="radio" name="questionTen" id="qTen1" required value="1"> 1
             </label>
             <label class="radio-inline">
               <input type="radio" name="questionTen" id="qTen2" value="2"> 2
@@ -279,7 +271,7 @@ body {
         <br>
         <br>
         
-
+<!--links to friends list and git-->
         <footer class="footer">
           <div class="container">
             <a href ="/api/friends" style="color: #4e607e">API Friends List </a> | <a href="https://github.com/eliserothberg/FriendFinder" style="color: #4e607e">GitHub Repo</a>
@@ -300,7 +292,7 @@ body {
   </div>
 </div>
 
-       
+<!--modal pop up showing user and their match-->       
 <div id="bffModal" class="modal fade" role="dialog">
   <div class="modal-dialog" style="width: 90%">
     <div class="modal-content">
@@ -323,6 +315,7 @@ body {
 
 <script type="text/javascript">  
 
+var diff = [];
 var answer = [];
 var replies = [];
 var allDiffs = [];
@@ -330,108 +323,106 @@ var sortDiffs = [];
 var newFriend;
 var theFriend;
 var thePhoto;
-var diff = [];
 
-if ('#first_name' != null && '#photo' != null) {
+//takes in user info
+$("form").submit(function() {
+  var newFriend = {
+    name: $('#first_name').val().trim(),
+    photo: $('#photo').val().trim(),
+    scores: replies,
+  };
+// pushes radio button replies into a created array
+  answer = $(this).serializeArray();
 
-  $("form").submit(function() {
-    var newFriend = {
-      name: $('#first_name').val().trim(),
-      photo: $('#photo').val().trim(),
-      scores: replies,
-    };
+  for (var i = 0; i < answer.length; i++) { 
+    replies.push(answer[i].value);  
+  }
+   
+  console.log("newFriend: " + newFriend.name + "  photo link: " + newFriend.photo + "  scores: " + newFriend.scores);
 
-    answer = $(this).serializeArray();
+  var currentURL = window.location.origin;
 
-    for (var i = 0; i < answer.length; i++) { 
-      replies.push(answer[i].value);  
-    }
-     
-    console.log("newFriend: " + newFriend.name + "  photo link: " + newFriend.photo + "  scores: " + newFriend.scores);
-
-    var currentURL = window.location.origin;
-
-    $.post("/api/friends", newFriend,
+//push user data to friend page
+  $.post("/api/friends", newFriend,
     function(data){
 
-      // if (data == true) {
-
-      function friendQuery(){
-        var currentURL = window.location.origin;
-
-        $.ajax({url: currentURL + "/api/friends", method: "GET"}) 
-          .done(function(friendsData) {
-
-          Array.prototype.compArr = function(array) {
-            diff = [];
-            if (array != null && this.length == array.length) {
-              for (var i = 0; i < array.length; i++) {
-                newDiff = Math.abs(this[i] - array[i]);
-                diff.push(newDiff);
-              }
+//function to compare user data with friends for best match
+    function friendQuery(){
+      var currentURL = window.location.origin;
+//get data to compare
+      $.ajax({url: currentURL + "/api/friends", method: "GET"}) 
+        .done(function(friendsData) {
+//create an array of the difference between user and friend answer 
+        Array.prototype.compArr = function(array) {
+          diff = [];
+          if (array != null && this.length == array.length) {
+            for (var i = 0; i < array.length; i++) {
+              newDiff = Math.abs(this[i] - array[i]);
+              diff.push(newDiff);
             }
-
-            return diff;
           }
 
-          for (var i = 0; i < friendsData.length -1; i++) {
-            var diff = newFriend.scores.compArr(friendsData[i].scores);
-            var totalDiff = diff.reduce(function(a,b) {
-              return a + b;
-            }, 0);
+          return diff;
+        }
+//compare user answer array with each friend array  
+        for (var i = 0; i < friendsData.length -1; i++) {
+          var diff = newFriend.scores.compArr(friendsData[i].scores);
+          var totalDiff = diff.reduce(function(a,b) {
+            return a + b;
+          }, 0);
 
-            allDiffs.push(totalDiff);
-            console.log("type of allDiffs = " + typeof allDiffs) 
+          allDiffs.push(totalDiff);
+          console.log("type of allDiffs = " + typeof allDiffs) 
 
-            console.log(newFriend.name + " and " + friendsData[i].name + " diff" + [i] + " = " + diff);
-            console.log(newFriend.name + " and " + friendsData[i].name + " totalDiff" + [i] + " = " + totalDiff);
+          console.log(newFriend.name + " and " + friendsData[i].name + " diff" + [i] + " = " + diff);
+          console.log(newFriend.name + " and " + friendsData[i].name + " totalDiff" + [i] + " = " + totalDiff);
 
+          sortDiffs.push(totalDiff);
+          sortDiffs.sort(function(a, b) {
+            return a - b;
+          });
 
-            sortDiffs.push(totalDiff);
-            sortDiffs.sort(function(a, b) {
-              return a - b;
-            });
-          
-            for (var j=0; j < allDiffs.length; j++){
-
-              if (sortDiffs[0] === allDiffs[j]) {
-                console.log("allDiffs[j] + " + allDiffs[j]);
-                console.log("friendsData[j].name = " + friendsData[j].name);
-                theFriend = friendsData[j].name;
-                thePhoto = friendsData[j].photo;
-              }
+      //match the lowest difference total with the friend name
+          for (var j=0; j < allDiffs.length; j++){
+            if (sortDiffs[0] === allDiffs[j]) {
+              console.log("allDiffs[j] + " + allDiffs[j]);
+              console.log("friendsData[j].name = " + friendsData[j].name);
+              theFriend = friendsData[j].name;
+              thePhoto = friendsData[j].photo;
             }
-            console.log("allDiffs = " + allDiffs);
-            console.log("sortDiffs = " + sortDiffs);
           }
+          console.log("allDiffs = " + allDiffs);
+          console.log("sortDiffs = " + sortDiffs);
+        }
+//push match into divs
+        console.log("Your new BFF is " + theFriend + "!" + "\nphoto: " + thePhoto);
+        $("#bffName").text(theFriend); 
+        $("#yourName").text(newFriend.name);             
+        $("#bffImage").attr("src", thePhoto);
+        $("#yourImage").attr("src", newFriend.photo);
+        $("#bffModal").modal('show');
+      })
+    };
+    friendQuery();
+  });
 
-          console.log("Your new BFF is " + theFriend + "!" + "\nphoto: " + thePhoto);
-            $("#bffName").text(theFriend); 
-            $("#yourName").text(newFriend.name);             
-            $("#bffImage").attr("src", thePhoto);
-            $("#yourImage").attr("src", newFriend.photo);
-            $("#bffModal").modal('show');
-
-        })
-      };
-      friendQuery();
-
-  //this clears the fields but doesn't let you enter new info- page needs to be refreshed.
-      // $("#first_name").reset();
-      // $("#photo").reset();
-      // $("input[type=radio]").each(function() {
-      //   $(this).attr("checked", false);
-      // });
-
-
-    });
-
-    return false;
-  }); 
-
-  $('#bffModal').on('hidden.bs.modal', function () {
- location.reload();
+  return false;
+}); 
+//when modal hidden, reload the page, clearing data
+$('#bffModal').on('hidden.bs.modal', function () {
+  location.reload();
 })
-}
 
 </script>
+
+<style>
+
+  body {
+    background-color: #bfc9d9;
+    text-align: center;
+  }
+
+</style>
+
+</body>
+</html>
